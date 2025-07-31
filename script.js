@@ -197,15 +197,27 @@ class GitHubPortfolio {
             const languagesSkills = document.getElementById('languages-skills');
             
             if (languagesSkills && languages.length > 0) {
-                languagesSkills.innerHTML = languages
-                    .map(([language, count]) => `<span class="skill-tag">${language}</span>`)
+                // Get existing skills (like C++, JavaScript, Python that are already there)
+                const existingSkills = Array.from(languagesSkills.querySelectorAll('.skill-tag')).map(tag => tag.textContent);
+                
+                // Add new languages from GitHub, avoiding duplicates
+                const newLanguages = languages
+                    .filter(([language]) => !existingSkills.includes(language))
+                    .slice(0, 7) // Limit to avoid overcrowding
+                    .map(([language]) => `<span class="skill-tag">${language}</span>`)
                     .join('');
+                
+                // Append new languages to existing ones
+                if (newLanguages) {
+                    languagesSkills.insertAdjacentHTML('beforeend', newLanguages);
+                }
             }
 
-            // Update languages count
+            // Update languages count based on all visible skills
             const languagesCount = document.getElementById('languages-count');
             if (languagesCount) {
-                this.animateCounter(languagesCount, languages.length);
+                const totalLanguages = languagesSkills ? languagesSkills.querySelectorAll('.skill-tag').length : 0;
+                this.animateCounter(languagesCount, totalLanguages);
             }
         } catch (error) {
             console.error('Error loading language skills:', error);
