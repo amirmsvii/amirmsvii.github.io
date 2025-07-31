@@ -1,4 +1,4 @@
-# Amir M - Portfolio Website
+# Amir Mousavi - Portfolio Website
 
 Welcome to my personal portfolio website! This site showcases my journey as a software developer and the projects I've worked on since joining my current company.
 
