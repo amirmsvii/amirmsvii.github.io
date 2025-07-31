@@ -108,15 +108,15 @@
                 <div class="featured-project">
                     <div class="project-header">
                         <div class="project-title-section">
-                            <h3 class="featured-title">🌊 iCleanLines Board Program Firmware</h3>
+                            <h3 class="featured-title">iCleanLines Board Program Firmware</h3>
                             <p class="project-subtitle">Production-Ready IoT Water Management System</p>
-                            <div class="project-badges">
-                                <span class="badge">ESP32</span>
-                                <span class="badge">PlatformIO</span>
-                                <span class="badge">FreeRTOS</span>
-                                <span class="badge">C++</span>
-                                <span class="badge">IoT</span>
-                                <span class="badge">Real-time Systems</span>
+                            <div class="project-tech-badges">
+                                <img src="https://img.shields.io/badge/ESP32-000000?style=for-the-badge&logo=Espressif&logoColor=white" alt="ESP32">
+                                <img src="https://img.shields.io/badge/PlatformIO-FF7F00?style=for-the-badge&logo=platformio&logoColor=white" alt="PlatformIO">
+                                <img src="https://img.shields.io/badge/FreeRTOS-00979D?style=for-the-badge&logo=freertos&logoColor=white" alt="FreeRTOS">
+                                <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+                                <img src="https://img.shields.io/badge/IoT-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="IoT">
+                                <img src="https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSocket">
                             </div>
                         </div>
                         <div class="project-links">
@@ -136,31 +136,39 @@
 
                     <div class="project-details">
                         <div class="technical-highlights">
-                            <h4>🎯 Key Technical Achievements</h4>
+                            <h4>Key Technical Achievements</h4>
                             <div class="achievements-grid">
                                 <div class="achievement">
-                                    <div class="achievement-icon">📶</div>
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-wifi"></i>
+                                    </div>
                                     <div class="achievement-content">
                                         <h5>Real-time Communication</h5>
                                         <p>WebSocket-based bidirectional communication with backend systems, featuring automatic reconnection and exponential backoff</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
-                                    <div class="achievement-icon">🔄</div>
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
                                     <div class="achievement-content">
                                         <h5>Multi-tasking Architecture</h5>
                                         <p>Three specialized FreeRTOS tasks running concurrently: DataTask (Priority 3), FlushTask (Priority 5), WebSocketTask (Priority 4)</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
-                                    <div class="achievement-icon">💾</div>
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
                                     <div class="achievement-content">
                                         <h5>Offline Data Caching</h5>
                                         <p>Smart batch storage to SD card with automatic sync when connectivity is restored, ensuring zero data loss</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
-                                    <div class="achievement-icon">🔧</div>
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-microchip"></i>
+                                    </div>
                                     <div class="achievement-content">
                                         <h5>Advanced Hardware Integration</h5>
                                         <p>RFID readers, UART communication, environmental sensors, LED controllers, and real-time monitoring systems</p>
@@ -170,25 +178,25 @@
                         </div>
 
                         <div class="architecture-section">
-                            <h4>🏗️ System Architecture</h4>
+                            <h4>System Architecture</h4>
                             <div class="architecture-grid">
                                 <div class="arch-component">
-                                    <h5>📊 DataTask</h5>
+                                    <h5>DataTask</h5>
                                     <p>UART data processing, RFID integration, system health monitoring, and periodic sensor readings</p>
                                 </div>
                                 <div class="arch-component">
-                                    <h5>🚿 FlushTask</h5>
+                                    <h5>FlushTask</h5>
                                     <p>Automated flush cycle execution, schedule management, and precise duration control</p>
                                 </div>
                                 <div class="arch-component">
-                                    <h5>🌐 WebSocketTask</h5>
+                                    <h5>WebSocketTask</h5>
                                     <p>Real-time command processing, connection management, and status broadcasting</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="technical-specs">
-                            <h4>⚡ Technical Specifications</h4>
+                            <h4>Technical Specifications</h4>
                             <div class="specs-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Platform:</span>
