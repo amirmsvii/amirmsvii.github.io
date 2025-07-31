@@ -1,1 +1,194 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir M - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Amir M</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Amir</span></h1>
+                    <p class="hero-subtitle">Software Developer & Technology Enthusiast</p>
+                    <p class="hero-description">
+                        Passionate about creating innovative solutions and building impactful projects. 
+                        Welcome to my portfolio where I showcase my journey in technology.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a dedicated software developer with a passion for creating efficient, 
+                            scalable solutions. Since joining my current company, I've been continuously 
+                            learning and growing, working on diverse projects that challenge me to expand 
+                            my skill set.
+                        </p>
+                        <p>
+                            This portfolio represents my journey in technology, showcasing the projects 
+                            and experiments I've worked on. Each project reflects my commitment to 
+                            writing clean code and solving real-world problems.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3 id="projects-count">0</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat">
+                                <h3 id="commits-count">0</h3>
+                                <p>GitHub Commits</p>
+                            </div>
+                            <div class="stat">
+                                <h3 id="languages-count">0</h3>
+                                <p>Languages Used</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically loaded -->
+                    <div class="project-card loading">
+                        <div class="loading-placeholder">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading projects from GitHub...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-footer">
+                    <a href="https://github.com/amirmsvii" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> View All on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-list" id="languages-skills">
+                            <!-- Will be populated from GitHub data -->
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Technologies & Tools</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Command Line</span>
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Areas of Interest</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Software Development</span>
+                            <span class="skill-tag">Open Source</span>
+                            <span class="skill-tag">Continuous Learning</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        I'm always interested in new opportunities and collaborations. 
+                        Feel free to reach out if you'd like to discuss projects, share ideas, 
+                        or just connect!
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://github.com/amirmsvii" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:contact@amirmsvii.github.io" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://linkedin.com/in/amirmsvii" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Amir M. Built with ❤️ and hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
