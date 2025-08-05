@@ -471,6 +471,8 @@
                                 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
                                 <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express">
                                 <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+                                <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis">
+                                <img src="https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white" alt="AWS S3">
                                 <img src="https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSocket">
                                 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
                                 <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT">
@@ -485,9 +487,9 @@
                     
                     <div class="project-overview">
                         <p class="project-description">
-                            Architected a robust backend infrastructure for IoT device management and data processing. 
-                            Built with Node.js, Express, and MongoDB, providing RESTful APIs, real-time WebSocket communication, 
-                            and scalable data storage for thousands of connected devices.
+                            Architected a robust, enterprise-grade backend infrastructure for IoT device management and data processing. 
+                            Built with Node.js, Express, and MongoDB, featuring Redis caching, AWS S3 file storage, rate limiting, 
+                            and real-time WebSocket communication designed to handle thousands of concurrent connections and high-throughput data processing.
                         </p>
                     </div>
 
@@ -500,17 +502,26 @@
                                         <i class="fas fa-server"></i>
                                     </div>
                                     <div class="achievement-content">
-                                        <h5>Scalable API Architecture</h5>
-                                        <p>RESTful API design with Express.js, featuring modular routing, middleware integration, and comprehensive error handling</p>
+                                        <h5>Enterprise API Architecture</h5>
+                                        <p>RESTful API with Express.js, rate limiting, request validation, comprehensive error handling, and API versioning for production environments</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
                                     <div class="achievement-icon">
-                                        <i class="fas fa-database"></i>
+                                        <i class="fas fa-tachometer-alt"></i>
                                     </div>
                                     <div class="achievement-content">
-                                        <h5>High-Performance Data Storage</h5>
-                                        <p>MongoDB integration with optimized schemas, indexing strategies, and aggregation pipelines for efficient data operations</p>
+                                        <h5>Redis Caching & Performance</h5>
+                                        <p>Implemented Redis for high-performance caching, session management, and real-time data storage with sub-millisecond response times</p>
+                                    </div>
+                                </div>
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h5>AWS S3 File Management</h5>
+                                        <p>Secure file upload and storage system using AWS S3 with pre-signed URLs, image processing, and automated backup strategies</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
@@ -518,17 +529,26 @@
                                         <i class="fas fa-sync-alt"></i>
                                     </div>
                                     <div class="achievement-content">
-                                        <h5>Real-time Event Processing</h5>
-                                        <p>WebSocket server implementation for handling concurrent device connections and broadcasting live updates to clients</p>
+                                        <h5>Real-time WebSocket Server</h5>
+                                        <p>Scalable WebSocket implementation handling concurrent device connections, real-time data streaming, and instant command execution</p>
                                     </div>
                                 </div>
                                 <div class="achievement">
                                     <div class="achievement-icon">
-                                        <i class="fas fa-lock"></i>
+                                        <i class="fas fa-shield-alt"></i>
                                     </div>
                                     <div class="achievement-content">
-                                        <h5>Security & Authentication</h5>
-                                        <p>JWT-based authentication, role-based access control, and API rate limiting for secure device and user management</p>
+                                        <h5>Advanced Security & Rate Limiting</h5>
+                                        <p>Multi-layer security with JWT authentication, role-based access control, API rate limiting, and DDoS protection mechanisms</p>
+                                    </div>
+                                </div>
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h5>High-Performance Data Layer</h5>
+                                        <p>MongoDB with optimized schemas, indexing strategies, aggregation pipelines, and automated data archiving for scalability</p>
                                     </div>
                                 </div>
                             </div>
@@ -538,16 +558,28 @@
                             <h4>System Architecture</h4>
                             <div class="architecture-grid">
                                 <div class="arch-component">
-                                    <h5>API Layer</h5>
-                                    <p>Express.js routes with middleware for authentication, validation, and error handling across all endpoints</p>
+                                    <h5>API Gateway Layer</h5>
+                                    <p>Express.js with rate limiting, request validation, authentication middleware, and API versioning across all endpoints</p>
                                 </div>
                                 <div class="arch-component">
-                                    <h5>Data Processing</h5>
-                                    <p>Real-time data ingestion, validation, and storage with MongoDB aggregation for analytics and reporting</p>
+                                    <h5>Caching & Performance</h5>
+                                    <p>Redis integration for session management, API response caching, and real-time data storage with automatic expiration</p>
                                 </div>
                                 <div class="arch-component">
-                                    <h5>WebSocket Server</h5>
-                                    <p>Socket.IO implementation for managing device connections, broadcasting updates, and handling real-time commands</p>
+                                    <h5>File Storage System</h5>
+                                    <p>AWS S3 integration with secure upload handling, image processing pipelines, and automated file lifecycle management</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h5>Real-time Communication</h5>
+                                    <p>Socket.IO WebSocket server managing device connections, broadcasting updates, and handling real-time command execution</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h5>Data Processing Engine</h5>
+                                    <p>MongoDB with aggregation pipelines, automated data validation, indexing optimization, and background job processing</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h5>Security Layer</h5>
+                                    <p>Multi-tier security with JWT tokens, role-based permissions, API rate limiting, and comprehensive audit logging</p>
                                 </div>
                             </div>
                         </div>
@@ -561,19 +593,23 @@
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Database:</span>
-                                    <span class="spec-value">MongoDB with Mongoose ODM</span>
+                                    <span class="spec-value">MongoDB with Mongoose ODM + Redis caching</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">File Storage:</span>
+                                    <span class="spec-value">AWS S3 with pre-signed URLs and image processing</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Real-time:</span>
-                                    <span class="spec-value">Socket.IO for WebSocket communication</span>
+                                    <span class="spec-value">Socket.IO WebSocket server with Redis adapter</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Authentication:</span>
-                                    <span class="spec-value">JWT tokens with role-based access control</span>
+                                    <span class="spec-label">Security:</span>
+                                    <span class="spec-value">JWT authentication + rate limiting + RBAC</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Features:</span>
-                                    <span class="spec-value">REST APIs, real-time data processing, device management</span>
+                                    <span class="spec-label">Performance:</span>
+                                    <span class="spec-value">Redis caching, API optimization, horizontal scaling</span>
                                 </div>
                             </div>
                         </div>
@@ -635,10 +671,15 @@
                             <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">Express.js</span>
                             <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">AWS S3</span>
                             <span class="skill-tag">Socket.IO</span>
                             <span class="skill-tag">JWT Authentication</span>
                             <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Rate Limiting</span>
                             <span class="skill-tag">Mongoose ODM</span>
+                            <span class="skill-tag">File Upload Systems</span>
+                            <span class="skill-tag">Caching Strategies</span>
                         </div>
                     </div>
                     <div class="skill-category">
