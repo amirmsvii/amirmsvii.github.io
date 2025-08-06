@@ -3,51 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Mousavi - Software Developer Resume</title>
+    <title>Amir Mousavi - Resume</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- PDF Generation Library -->
+    <!-- PDF Generation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-    <!-- Search and Controls -->
+    <!-- Hidden Controls - Floating Action Buttons -->
     <div class="resume-controls">
-        <div class="container">
-            <div class="controls-content">
-                <div class="search-container">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Search skills, technologies, keywords...">
-                    <button id="clear-search" class="clear-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="action-buttons">
-                    <button id="download-pdf" class="btn btn-primary">
-                        <i class="fas fa-download"></i>
-                        Download PDF
-                    </button>
-                    <button id="print-resume" class="btn btn-secondary">
-                        <i class="fas fa-print"></i>
-                        Print
-                    </button>
-                </div>
-            </div>
+        <button id="search-toggle" class="control-btn">
+            <i class="fas fa-search"></i> Search
+        </button>
+        <button id="download-pdf" class="control-btn">
+            <i class="fas fa-download"></i> PDF
+        </button>
+        <button id="print-resume" class="control-btn">
+            <i class="fas fa-print"></i> Print
+        </button>
+    </div>
+
+    <!-- Hidden Search Overlay -->
+    <div id="search-overlay" class="interactive-overlay">
+        <div class="interactive-modal">
+            <button class="modal-close" onclick="closeSearch()">×</button>
+            <h3>Search Resume</h3>
+            <input type="text" id="search-input" placeholder="Search for skills, technologies, keywords..." style="width: 100%; padding: 8px; margin: 12px 0; border: 1px solid #ccc; border-radius: 4px;">
+            <div id="search-results"></div>
         </div>
     </div>
 
-    <!-- Resume Content -->
-    <div class="resume-container" id="resume-content">
-        <!-- Header Section -->
+    <!-- Traditional Paper Resume -->
+    <div class="paper-resume" id="resume-content">
+        
+        <!-- Header -->
         <header class="resume-header">
-            <div class="header-content">
-                <div class="personal-info">
-                    <h1 class="name">Amir Mousavi</h1>
-                    <h2 class="title">Senior Software Developer</h2>
-                    <p class="summary">
-                        Experienced software developer specializing in IoT systems, AI/ML applications, and full-stack development. 
-                        Proven track record of delivering enterprise-grade solutions with expertise in embedded systems, 
+            <div class="name-title">
+                <h1 class="candidate-name">AMIR MOUSAVI</h1>
+                <h2 class="job-title">Senior Software Developer</h2>
+            </div>
+            <div class="contact-line">
+                <div class="contact-item">
+                    <span>amir@example.com</span>
+                    <div class="tooltip">Email me directly</div>
+                </div>
+                <div class="contact-item">
+                    <span>github.com/amirmsvii</span>
+                    <div class="tooltip">View my GitHub portfolio</div>
+                </div>
+                <div class="contact-item">
+                    <span>linkedin.com/in/amirmousavi</span>
+                    <div class="tooltip">Connect on LinkedIn</div>
+                </div>
+                <div class="contact-item">
+                    <span>Portfolio Website</span>
+                    <div class="tooltip">amirmsvii.github.io</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h3 class="section-header">Professional Summary</h3>
+            <p style="font-size: 10pt; color: var(--text-gray); line-height: 1.4;">
+                Experienced software developer with expertise in IoT systems, AI/ML applications, and full-stack development. 
+                Proven track record of delivering enterprise-grade solutions with modern technologies including embedded systems, 
+                cloud architecture, and intelligent automation. Specialized in creating scalable applications that bridge 
+                hardware and software ecosystems.
+            </p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="resume-section">
+            <h3 class="section-header">Professional Experience</h3>
+            
+            <div class="experience-entry">
+                <div class="job-header">
+                    <div>
+                        <span class="position-title">Senior Software Developer</span>
+                        <span class="company-name">Current Company</span>
+                    </div>
+                    <span class="date-range">2023 - Present</span>
+                </div>
+                <p class="job-description">Lead development of enterprise IoT solutions and AI-powered applications for industrial automation.</p>
+                <ul class="achievements-list">
+                    <li>Architected and deployed 15+ IoT systems handling 50,000+ daily sensor readings</li>
+                    <li>Developed AI chatbot with RAG architecture achieving 95% user satisfaction rate</li>
+                    <li>Implemented real-time dashboard serving 1,000+ concurrent users with <200ms response time</li>
+                    <li>Led team of 4 developers in agile development practices and code review processes</li>
+                </ul>
+            </div>
+
+            <div class="experience-entry">
+                <div class="job-header">
+                    <div>
+                        <span class="position-title">Full-Stack Developer</span>
+                        <span class="company-name">Tech Solutions Inc.</span>
+                    </div>
+                    <span class="date-range">2021 - 2023</span>
+                </div>
+                <p class="job-description">Developed scalable web applications and embedded systems for diverse client base.</p>
+                <ul class="achievements-list">
+                    <li>Built responsive React applications with TypeScript and Material-UI components</li>
+                    <li>Created Node.js backend services with Redis caching and AWS S3 integration</li>
+                    <li>Designed embedded firmware for ESP32/ESP8266 with FreeRTOS and WebSocket communication</li>
+                    <li>Implemented automated testing and CI/CD pipelines reducing deployment time by 60%</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Two-column layout for Skills and Education -->
+        <div class="two-column-section">
+            <!-- Technical Skills -->
+            <section class="skills-section">
+                <h3 class="section-header">Technical Skills</h3>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Programming Languages</div>
+                    <div class="skills-list">
+                        <span class="skill-item">C++<div class="skill-level">Expert - 8+ years</div></span>, 
+                        <span class="skill-item">JavaScript<div class="skill-level">Expert - 6+ years</div></span>, 
+                        <span class="skill-item">TypeScript<div class="skill-level">Advanced - 4+ years</div></span>, 
+                        <span class="skill-item">Python<div class="skill-level">Advanced - 5+ years</div></span>, 
+                        <span class="skill-item">HTML5/CSS3<div class="skill-level">Expert - 7+ years</div></span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">Frontend Development</div>
+                    <div class="skills-list">
+                        <span class="skill-item">React<div class="skill-level">Expert - Production apps</div></span>, 
+                        <span class="skill-item">Material-UI<div class="skill-level">Advanced - UI/UX focus</div></span>, 
+                        <span class="skill-item">Chart.js<div class="skill-level">Intermediate - Data viz</div></span>, 
+                        <span class="skill-item">PWA<div class="skill-level">Advanced - Offline apps</div></span>, 
+                        Responsive Design
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">Backend & Cloud</div>
+                    <div class="skills-list">
+                        <span class="skill-item">Node.js<div class="skill-level">Expert - Microservices</div></span>, 
+                        <span class="skill-item">Express.js<div class="skill-level">Expert - REST APIs</div></span>, 
+                        <span class="skill-item">WebSocket<div class="skill-level">Advanced - Real-time</div></span>, 
+                        <span class="skill-item">MongoDB<div class="skill-level">Advanced - NoSQL</div></span>, 
+                        <span class="skill-item">Redis<div class="skill-level">Intermediate - Caching</div></span>, 
+                        <span class="skill-item">AWS S3<div class="skill-level">Intermediate - File storage</div></span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">AI & Embedded Systems</div>
+                    <div class="skills-list">
+                        <span class="skill-item">OpenAI GPT<div class="skill-level">Advanced - RAG systems</div></span>, 
+                        <span class="skill-item">ESP32/ESP8266<div class="skill-level">Expert - IoT firmware</div></span>, 
+                        <span class="skill-item">FreeRTOS<div class="skill-level">Advanced - Real-time OS</div></span>, 
+                        <span class="skill-item">PlatformIO<div class="skill-level">Advanced - Development</div></span>, 
+                        UART, I²C, RFID
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="resume-section">
+                <h3 class="section-header">Education & Certifications</h3>
+                
+                <div class="education-entry">
+                    <div class="education-header">
+                        <div>
+                            <span class="degree-title">Self-Directed Technology Learning</span>
+                        </div>
+                        <span class="education-date">2018 - Present</span>
+                    </div>
+                    <div class="education-details">Continuous professional development through hands-on projects and open-source contributions</div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-header">
+                        <div>
+                            <span class="degree-title">Specialized Training</span>
+                        </div>
+                    </div>
+                    <div class="education-details">
+                        • IoT & Embedded Systems Development<br>
+                        • AI/ML and RAG Architecture<br>
+                        • Cloud Architecture & Microservices<br>
+                        • Full-Stack JavaScript Development
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Key Projects -->
+        <section class="projects-section">
+            <h3 class="section-header">Key Projects</h3>
+            
+            <div class="project-entry">
+                <div class="project-header">
+                    <div>
+                        <span class="project-title">IoT Water Management System</span>
+                        <span class="project-tech">ESP32 • FreeRTOS • WebSocket • C++</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">GitHub</a>
+                    <a href="#" class="project-link">Demo</a>
+                </div>
+                <p class="project-description">
+                    Enterprise-grade embedded firmware for industrial IoT systems with multi-tasking architecture, 
+                    real-time communication, and autonomous operation capabilities.
+                </p>
+                <ul class="project-highlights">
+                    <li>Implemented WebSocket-based bidirectional communication with automatic reconnection</li>
+                    <li>Designed three specialized FreeRTOS tasks with optimized priority scheduling</li>
+                    <li>Built offline data caching system with automatic sync when connectivity restored</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <div>
+                        <span class="project-title">Enterprise AI Chatbot</span>
+                        <span class="project-tech">Python • OpenAI • RAG • Vector DB</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Live</a>
+                    <a href="#" class="project-link">Docs</a>
+                </div>
+                <p class="project-description">
+                    Intelligent chatbot leveraging Retrieval-Augmented Generation architecture with OpenAI integration 
+                    and vector database technology for context-aware responses.
+                </p>
+                <ul class="project-highlights">
+                    <li>Built RAG system combining document retrieval with generative AI</li>
+                    <li>Implemented vector database for semantic search and knowledge base queries</li>
+                    <li>Achieved human-like conversation capabilities with intelligent query understanding</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <div>
+                        <span class="project-title">Real-time IoT Dashboard</span>
+                        <span class="project-tech">React • Node.js • MongoDB • Redis • AWS</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">GitHub</a>
+                    <a href="#" class="project-link">Demo</a>
+                </div>
+                <p class="project-description">
+                    Comprehensive IoT dashboard with real-time device monitoring, data visualization, 
+                    and control interface using modern full-stack technologies.
+                </p>
+                <ul class="project-highlights">
+                    <li>Built React TypeScript frontend with Material-UI and real-time data visualization</li>
+                    <li>Developed Node.js backend with Redis caching and AWS S3 file storage</li>
+                    <li>Created WebSocket server handling thousands of concurrent device connections</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="resume-section" style="margin-bottom: 0;">
+            <h3 class="section-header">Additional Information</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 10pt; color: var(--text-gray);">
+                <div>
+                    <strong>GitHub:</strong> 25+ repositories showcasing diverse technical projects<br>
+                    <strong>Code Quality:</strong> 500+ commits demonstrating consistent development practices
+                </div>
+                <div>
+                    <strong>Languages:</strong> English (Native), Persian (Native)<br>
+                    <strong>Interests:</strong> Open Source, IoT Innovation, AI/ML Research
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
                         cloud architecture, and modern web technologies.
                     </p>
                 </div>
