@@ -93,6 +93,60 @@
   ],
   "projects": [
     {
+      "title": "IoT Water Management System",
+      "role": "Firmware Developer",
+      "location": "Personal Project",
+      "period": "2024",
+      "type": "personal",
+      "technologies": ["ESP32", "FreeRTOS", "WebSocket", "C++"],
+      "description": "Enterprise-grade embedded firmware for industrial IoT systems with multi-tasking architecture, real-time communication, and autonomous operation capabilities",
+      "achievements": [
+        "Implemented WebSocket-based bidirectional communication with automatic reconnection",
+        "Designed three specialized FreeRTOS tasks with optimized priority scheduling",
+        "Built offline data caching system with automatic sync when connectivity restored"
+      ],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "title": "Enterprise AI Chatbot",
+      "role": "AI Developer",
+      "location": "Personal Project",
+      "period": "2024",
+      "type": "personal",
+      "technologies": ["Python", "OpenAI", "RAG", "Vector DB"],
+      "description": "Intelligent chatbot leveraging Retrieval-Augmented Generation architecture with OpenAI integration and vector database technology for context-aware responses",
+      "achievements": [
+        "Built RAG system combining document retrieval with generative AI",
+        "Implemented vector database for semantic search and knowledge base queries",
+        "Achieved human-like conversation capabilities with intelligent query understanding"
+      ],
+      "links": {
+        "live": "#",
+        "docs": "#"
+      }
+    },
+    {
+      "title": "Real-time IoT Dashboard",
+      "role": "Full Stack Developer",
+      "location": "Personal Project", 
+      "period": "2024",
+      "type": "personal",
+      "technologies": ["React", "Node.js", "MongoDB", "Redis", "AWS"],
+      "description": "Comprehensive IoT dashboard with real-time device monitoring, data visualization, and control interface using modern full-stack technologies",
+      "achievements": [
+        "Built React TypeScript frontend with Material-UI and real-time data visualization",
+        "Developed Node.js backend with Redis caching and AWS S3 file storage",
+        "Created WebSocket server handling thousands of concurrent device connections"
+      ],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
       "title": "Outline VPN Server Deployment",
       "role": "DevOps Engineer",
       "location": "Toronto",
@@ -194,5 +248,11 @@
       "Team Leadership",
       "Documentation"
     ]
+  },
+  "additionalInfo": {
+    "github": "25+ repositories showcasing diverse technical projects",
+    "codeQuality": "500+ commits demonstrating consistent development practices",
+    "languages": ["English (Native)", "Persian (Native)"],
+    "interests": ["Open Source", "IoT Innovation", "AI/ML Research"]
   }
 }
